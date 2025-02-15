@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lion Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #e2e2e2;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lion Facts</h1>
+        <ul id="facts-list"></ul>
+    </div>
+    <script>
+        const lionFacts = {
+            "lions": [
+                {
+                    "fact": "Lions are the only big cats that live in social groups called prides."
+                },
+                {
+                    "fact": "A pride typically consists of several related females, their cubs, and a small number of adult males."
+                },
+                {
+                    "fact": "Lions are known for their distinctive manes, which can vary in color and size."
+                },
+                {
+                    "fact": "Male lions can weigh between 330 to 550 pounds, while females typically weigh between 265 to 400 pounds."
+                },
+                {
+                    "fact": "Lions are apex predators and primarily hunt large herbivores such as zebras and wildebeests."
+                },
+                {
+                    "fact": "They are most active during the night and early morning, which is known as being crepuscular."
+                },
+                {
+                    "fact": "Lions can run at speeds of up to 50 miles per hour for short distances."
+                },
+                {
+                    "fact": "The roar of a lion can be heard from up to 5 miles away."
+                },
+                {
+                    "fact": "Lions can live up to 10-14 years in the wild, but can live longer in captivity."
+                },
+                {
+                    "fact": "The lion is often referred to as the 'king of the jungle,' although they primarily inhabit savannas and grasslands."
+                }
+            ]
+        };
+
+        const factsList = document.getElementById('facts-list');
+
+        lionFacts.lions.forEach(lion => {
+            const li = document.createElement('li');
+            li.textContent = lion.fact;
+            factsList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
